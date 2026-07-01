@@ -1,0 +1,9 @@
+#!/bin/bash
+
+apt update -y
+apt install -y nginx wget
+
+wget -O /var/www/html/index.html \
+https://raw.githubusercontent.com/emdmelmon/scheduler/main/index.html
+
+systemctl restart nginx
